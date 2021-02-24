@@ -11,35 +11,35 @@
         <div>
         &nbsp;<asp:Label ID="lblStuID" runat="server" Text="Patient ID:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtStuID" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtStuID" runat="server" MaxLength="12"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtStuID" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;
             
             <asp:Label ID="Label1" runat="server" Text="Middle Initial:"></asp:Label>
             &nbsp;&nbsp;
-            <asp:TextBox ID="textMiddleInitial" runat="server"></asp:TextBox>
+            <asp:TextBox ID="textMiddleInitial" runat="server" MaxLength="1"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtLName" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             <br />
             <br />
             <asp:Label ID="lblFName" runat="server" Text="First Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>&nbsp;
+            <asp:TextBox ID="txtFName" runat="server" MaxLength="30"></asp:TextBox>&nbsp;
 			<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtFName" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;
             &nbsp;&nbsp;
             <asp:Label ID="labelZip" runat="server" Text="Zip Code:" />&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="textZipCode" runat="server" />
+            <asp:TextBox ID="textZipCode" runat="server" MaxLength="5 "/>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="textZipCode" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             <br />
             <br />
             <asp:Label ID="lblLName" runat="server" Text="Last Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtLName" runat="server" MaxLength="30 "></asp:TextBox>
             &nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtLName" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="labelEmail" runat="server" Text="Primary E-mail Address:"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="textEmail" runat="server" />
+            <asp:TextBox ID="textEmail" runat="server" MaxLength="30" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="textEmail" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             <br />
             <br />
@@ -60,24 +60,24 @@
             <br />
             <asp:Label ID="labelPhone" runat="server" Text="Primary Phone Number:" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="textPhone" runat="server" />
+            <asp:TextBox ID="textPhone" runat="server" MaxLength="15"/>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="textPhone" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             <br />
             <br />
             <asp:Label ID="lblAddress" runat="server" Text="Address:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtAddress" runat="server" MaxLength="60" ></asp:TextBox>
             &nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtAddress" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="labelInsurance" runat="server" Text="Insurance:" />
             &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="textInsurance" runat="server" />
+            <asp:TextBox ID="textInsurance" runat="server" MaxLength="50" />
             &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="textInsurance" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             <br />
             <br />
             <asp:Label ID="lblCity" runat="server" Text="City:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCity" runat="server" MaxLength="50"></asp:TextBox>
             &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtCity" ErrorMessage="* This field is required" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label2" runat="server" Text="All fields are required"></asp:Label>

@@ -351,7 +351,8 @@ namespace DataBase {
             {
                 myConn.Close();
             }
-        }public void QUERYPHYSICIAN(string phyid)
+        }
+        public void QUERYPHYSICIAN(string phyid)
         {
             try
             {
@@ -364,6 +365,68 @@ namespace DataBase {
 
                 
                 cmdString.Parameters.Add("@phy_id", SqlDbType.VarChar, 12).Value = phyid;
+                
+                
+
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                cmdString.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
+        public DataSet SHOWBYDATE(string date_refill) {
+		
+			try {
+            
+                myConn.Open();
+                cmdString.Parameters.Clear();
+
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "SHOWREFILLBYDATE";
+
+                
+                cmdString.Parameters.Add("@date_refill", SqlDbType.VarChar, 25).Value = date_refill;
+              
+
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                aAdapter.SelectCommand = cmdString;
+                DataSet aDataSet = new DataSet();
+
+                aAdapter.Fill(aDataSet);
+
+                return aDataSet;
+				
+            } catch (Exception ex) {
+            
+                throw new ArgumentException(ex.Message);
+            }
+			
+            finally {
+            
+                myConn.Close();
+            }
+		}
+        public void deleteRefill(string date)
+        {
+            try
+            {
+                myConn.Open();
+                cmdString.Parameters.Clear();
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "DELETEREFILL";
+
+                
+                cmdString.Parameters.Add("@dare_refill", SqlDbType.VarChar, 12).Value = date;
                 
                 
 

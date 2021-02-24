@@ -61,7 +61,7 @@
             <tr>
                 <td style="width: 25%; height: 26px;">
                     Physician ID:</td>
-                <td style="border-style: ridge;" class="auto-style1">
+                <td style="border-style: ridge;" class="auto-style7">
         <asp:TextBox ID="txtPhysicianID" runat="server" MaxLength="7" Width="541px" Height="16px" ></asp:TextBox></td>
             </tr>
             <tr>
@@ -170,8 +170,8 @@
        HeaderText="View" Text="View" runat="server" Target="_blank" >  
                 <HeaderStyle HorizontalAlign="Center" />
             </asp:HyperLinkField>--%>
-            <a href="#">Help</a>
-            <a href="#">About</a>
+            <a href="mailto:techhelp@louisrx.com">Help</a>
+            <a href="https://github.com/MLGeoff/CNSA-216-FinalProject/commits/main">About</a>
         </div>
 
     </td>  

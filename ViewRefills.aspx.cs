@@ -49,7 +49,7 @@ namespace DataBase
                 {
                     Response.Redirect("Refills.aspx");
                 }
-            }
+              }
         }
         public void BindData(string rx_number, string type)
         {
@@ -74,8 +74,91 @@ namespace DataBase
            
         }
 
+        protected void lbtnEdit_Click(object sender, CommandEventArgs e)
+        {
+            
+            string recordToBeEdited;
+            Int64 myEditedRecord = 0;
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            try
+            {
+               
+                
+
+                recordToBeEdited = (e.CommandArgument.ToString().Trim()); //encrypt this
+
+                //EncryptQueryString(recordToBeEdited);
+
+                
+                sb.Append("<script language='javascript'>");
+                //EncryptQueryString(recordToBeEdited.ToString());
+                sb.Append("window.open('EditRefills.aspx?ID=" + recordToBeEdited + "&type=Edit" + "' , 'DisplayEdit',");
+                //decryptQueryString(recordToBeEdited);
+                sb.Append("'width=525, height=525, menubar=no, resizable=yes, left=50, top=50, scrollbars=yes');<");
+                sb.Append("/script>");
+                
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", sb.ToString());
+            }
+            catch (Exception ex)
+            {
+               lblException.Text = ex.Message.ToString();
+            }
+        }
+        protected void Delete_Click(object sender, CommandEventArgs e)
+        {
+            try
+            {
+               
+                string date = "";
+                date = (e.CommandArgument.ToString().Trim());
+                PatientDataTier ptd = new PatientDataTier();
+                Cache.Remove("StudentData");
+               
+                            ptd.deleteRefill(date);
+              
+              
+            }
+            catch (Exception ex)
+            {
+                lblException.Text = ex.Message.ToString();
+            }
+        }
+        private void BindData()
+        {
+            PatientDataTier aDatatier = new PatientDataTier();
+
+            string date = Convert.ToString(Session["date"]);
+           
+
+            
+
+            if ((date.Length > 0))
+            {
+                DataSet aDataset = new DataSet();
+                aDataset = aDatatier.SHOWBYDATE(date);
+                if (aDataset.Tables[0].Rows.Count > 0)
+                {
+                    grdViewRefills.Visible = true;
+                    grdViewRefills.DataSource = aDataset.Tables[0];
 
 
+                    if (Cache["StudentData"] == null)
+                    {
+                        Cache.Add("StudentData", new DataView(aDataset.Tables[0]), null, System.Web.Caching.Cache.NoAbsoluteExpiration,
+                            System.TimeSpan.FromMinutes(10), System.Web.Caching.CacheItemPriority.Default, null);
+                        grdViewRefills.DataBind();
+                    }
+                }
+                else
+                {
+                    grdViewRefills.Visible = false;
+                }
+            }  
+            else
+            {
+                grdViewRefills.Visible = false;
+            }
+        }
 
     }
 }

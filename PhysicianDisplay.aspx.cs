@@ -228,6 +228,7 @@ namespace DataBase
             string office = textOffice.Text;
 
 
+
             patDT.UPDATEPhysician(phy_ID,fname,lname,gender,phy_state,phy_address,city,zip,phone,email,office); 
                 }
             catch (Exception ex)

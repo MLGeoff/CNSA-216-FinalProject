@@ -11,7 +11,7 @@ namespace DataBase
 {
 
 
-    public partial class Home
+    public partial class EditRefills
     {
 
         /// <summary>
@@ -24,94 +24,76 @@ namespace DataBase
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// hplNew control.
+        /// lblRXNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplNew;
+        protected global::System.Web.UI.WebControls.Label lblRXNumber;
 
         /// <summary>
-        /// Label1 control.
+        /// txtRXNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtRXNumber;
 
         /// <summary>
-        /// pnlSearch control.
+        /// lblDateRefill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSearch;
+        protected global::System.Web.UI.WebControls.Label lblDateRefill;
 
         /// <summary>
-        /// txtPatientID control.
+        /// txtDateRefill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPatientID;
+        protected global::System.Web.UI.WebControls.TextBox txtDateRefill;
 
         /// <summary>
-        /// txtFName control.
+        /// labelAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFName;
+        protected global::System.Web.UI.WebControls.Label labelAmount;
 
         /// <summary>
-        /// txtLName control.
+        /// textAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLName;
+        protected global::System.Web.UI.WebControls.TextBox textAmount;
 
         /// <summary>
-        /// btnSearch control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.Button btnSave;
 
         /// <summary>
-        /// grdStudent control.
+        /// btnClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdStudent;
-
-        /// <summary>
-        /// addLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink addLink;
-
-        /// <summary>
-        /// staffDir control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink staffDir;
+        protected global::System.Web.UI.WebControls.Button btnClose;
 
         /// <summary>
         /// lblException control.

@@ -11,29 +11,29 @@
         <div>
         &nbsp;<asp:Label ID="lblStuID" runat="server" Text="Student ID:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtStuID" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtStuID" runat="server" MaxLength="12"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;
             
             <asp:Label ID="Label1" runat="server" Text="Middle Initial:"></asp:Label>
             &nbsp;&nbsp;
-            <asp:TextBox ID="textMiddleInitial" runat="server"></asp:TextBox>
+            <asp:TextBox ID="textMiddleInitial" runat="server" MaxLength="1"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="lblFName" runat="server" Text="First Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtFName" runat="server" MaxLength="30"></asp:TextBox>&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;
             <asp:Label ID="labelZip" runat="server" Text="Zip Code:" />&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="textZipCode" runat="server" />
+            <asp:TextBox ID="textZipCode" runat="server" MaxLength="5" />
             <br />
             <br />
             <asp:Label ID="lblLName" runat="server" Text="Last Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtLName" runat="server" MaxLength="30"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="labelEmail" runat="server" Text="Primary E-mail Address:"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="textEmail" runat="server" />
+            <asp:TextBox ID="textEmail" runat="server" MaxLength="100" />
             <br />
             <br />
             <asp:Label ID="lblDOB" runat="server" Text="Date of Birth:"></asp:Label>
@@ -83,7 +83,6 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblException" runat="server"></asp:Label>
         </div>
-		
     </form>
 </body>
 </html>

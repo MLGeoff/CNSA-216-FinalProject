@@ -1,10 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FinalProject.Home" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Louis Pharmacy</title>
     
     
     <style type="text/css">
@@ -16,7 +18,11 @@
             width: 1013px;
         }
         
-    </style>
+        .auto-style4 {
+            margin-left: 226px;
+        }
+        
+        </style>
 </head>
   =
 
@@ -28,7 +34,7 @@
             <h1>
                 Welcome,
                 <asp:Label ID="labelDoctorName" runat="server"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Logout<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
                 <table class="auto-style2">
                     <tr>
                         <td class="auto-style3">&nbsp;</td>
@@ -63,16 +69,35 @@
             <asp:HyperLink ID="addLink" runat="server" Text="Add/Edit Patients" NavigateUrl="~/Table.aspx"></asp:HyperLink>
             <asp:HyperLink ID="staffDir" runat="server" Text="Staff Directory" NavigateUrl="~/PhysicianTable.aspx"></asp:HyperLink>
             <%--<a href="#">Staff Directory</a>--%>
-            <a href="#">Help</a>
-            <a href="#">About</a>
+            <a href="mailto:techhelp@louisrx.com">Help</a>
+            <a href="https://github.com/MLGeoff/CNSA-216-FinalProject/commits/main">About</a>
         </div>
 
 <!-- Page content -->
 <div class="main">
   ...
 </div>
-
-
+         <div>
+             <asp:ScriptManager runat="server"></asp:ScriptManager>
+             <p style="font-size:18px;" class="auto-style4">Louis Pharmacy Tweets</p>
+             <ajaxToolkit:Twitter ID="Twitter1" runat="server" ScreenName="LouisPharmacy" CssClass="auto-style7" style="margin-left: 227px">
+            <EmptyDataTemplate>
+There are no matching tweets.
+</EmptyDataTemplate>
+<LayoutTemplate>
+<div runat="server" class="ajax__twitter_header"><asp:Image runat="server"
+        ImageUrl="mvwres://AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e/Twitter.Twitter32.png"></asp:Image>
+<h3 runat="server">Ajax Control Toolkit</h3>
+<h4 runat="server">ajaxcontroltoolkit</h4>
+</div>
+<ul runat="server" class="ajax__twitter_itemlist" style="margin:0px;"><asp:PlaceHolder runat="server" ID="ItemPlaceholder"></asp:PlaceHolder>
+</ul>
+<div runat="server" class="ajax__twitter_footer"><asp:Image runat="server" ImageUrl="mvwres://AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral,
+PublicKeyToken=28f01b0e84b6d53e/Twitter.Twitter24.png"></asp:Image>
+</div>
+</LayoutTemplate>
+        </ajaxToolkit:Twitter>
+    </div>
     </form>
 </body>
 </html>

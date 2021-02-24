@@ -23,29 +23,45 @@
             }
         }
     </script>
+    <style type="text/css">
+        .auto-style2 {
+            height: 20px;
+            width: 804px;
+        }
+        .auto-style3 {
+            width: 982px;
+        }
+        .auto-style4 {
+            height: 20px;
+            width: 982px;
+        }
+        .auto-style5 {
+            width: 21%;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <link rel="stylesheet" href="main2.css"/>
+        <link rel="stylesheet" href="main.css"/>
         <table>
 <tr>
-<td style="width:15%" rowspan="3" valign="middle"> &nbsp;<asp:HyperLink 
+<td rowspan="3" valign="middle" class="auto-style5"> &nbsp;<asp:HyperLink 
         ID="hplNew" runat="server" NavigateUrl="~/PatientAdd.aspx?ID=0">New 
    Patient</asp:HyperLink></td>
 
-<td colspan="2" style="height: 20px; width: 538px;" > 
+<td colspan="2" class="auto-style4" > 
     <asp:Label ID="Label1" runat="server" Text="Search criteria" Font-Bold="True" Font-Size="Medium"></asp:Label>
 
 </td>
 </tr>
 <tr>
-<td colspan="2" style="width: 538px" >
+<td colspan="2" class="auto-style3" >
     <asp:Panel ID="pnlSearch" runat="server" Width="100%">
         <table border="1" cellpadding="1" style="width: 100%; border-top-style: ridge; border-right-style: ridge; border-left-style: ridge; border-bottom-style: ridge;">
             <tr>
                 <td style="width: 25%; height: 26px;">
                     Patient ID:</td>
-                <td style="border-style: ridge;" class="auto-style1">
+                <td style="border-style: ridge;" class="auto-style7">
         <asp:TextBox ID="txtPatientID" runat="server" MaxLength="7" Width="313px" ></asp:TextBox></td>
             </tr>
             <tr>
@@ -65,7 +81,7 @@
 </td>
 </tr>
 <tr >
-<td colspan="2" align="center" style="width: 700px">
+<td colspan="2" align="center" class="auto-style3">
     <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click"  />
 <asp:GridView ID="grdStudent" AutoGenerateColumns="False"  
     CssClass="GridView" runat="server" Width="100%" AllowPaging="True" 
@@ -156,11 +172,24 @@
     
     </asp:GridView>
  
+     <div class="auto-style1">
+            
+            <asp:HyperLink ID="addLink" runat="server" Text="Add/Edit Patients" NavigateUrl="~/Table.aspx"></asp:HyperLink>
+            <asp:HyperLink ID="staffDir" runat="server" Text="Staff Directory" NavigateUrl="~/PhysicianTable.aspx"></asp:HyperLink>
+            <%--<asp:HyperLinkField DataNavigateUrlFields="pat_ID" 
+      DataNavigateUrlFormatString="Display.aspx?ID={0} &type=view"           
+       HeaderText="View" Text="View" runat="server" Target="_blank" >  
+                <HeaderStyle HorizontalAlign="Center" />
+            </asp:HyperLinkField>--%>
+            <a href="mailto:techhelp@louisrx.com">Help</a>
+            <a href="https://github.com/MLGeoff/CNSA-216-FinalProject/commits/main">About</a>
+        </div>
+
     </td>  
   </tr>
   
 <tr>
-<td colspan="3" style="width: 100%">
+<td colspan="3">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;<asp:Label ID="lblException" runat="server"></asp:Label>
     </td>
