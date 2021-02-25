@@ -45,10 +45,10 @@
             <ItemTemplate>
                 <asp:LinkButton ID="lbtnEdit" runat="server" 
                 OnCommand="lbtnEdit_Click" CommandName="lbtnEdit" 
-                CommandArgument='<% # Eval  ("date_refill") %>'>Edit</asp:LinkButton>&nbsp;&nbsp;
-                <asp:ImageButton ID="imgDelete" runat="server" CommandArgument='<% # Eval  ("date_refill") %>' OnCommand="Delete_Click"   
+                CommandArgument='<% # Eval  ("Date_Refill") %>'>Edit</asp:LinkButton>&nbsp;&nbsp;
+                <asp:ImageButton ID="imgDelete" runat="server" CommandArgument='<% # Eval  ("Date_Refill") %>' OnCommand="Delete_Click"   
               CommandName="lbtnDelete" ImageUrl="~/images/delete.jpg" Height ="30"  Width ="30" />||
-           <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<% # Eval  ("date_refill")  %>' OnCommand="lbtnEdit_Click"   
+           <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<% # Eval  ("Date_Refill")  %>' OnCommand="lbtnEdit_Click"   
               CommandName="lbtnEdit" ImageUrl="~/images/edit.jpg" Height ="30"  Width ="30" />
            
            
@@ -56,9 +56,9 @@
                 </ItemTemplate>
       <ItemTemplate>
 
-          <asp:ImageButton ID="imgDelete" runat="server" CommandArgument='<% # Eval  ("date_refill") %>' OnCommand="Delete_Click"   
+          <asp:ImageButton ID="imgDelete" runat="server" CommandArgument='<% # Eval  ("Date_Refill") %>' OnCommand="Delete_Click"   
               CommandName="lbtnDelete" ImageUrl="~/images/delete.jpg" Height ="30"  Width ="30" />||
-           <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<% # Eval  ("date_refill") %>' OnCommand="lbtnEdit_Click"   
+           <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<% # Eval  ("Date_Refill") %>' OnCommand="lbtnEdit_Click"   
               CommandName="lbtnEdit" ImageUrl="~/images/edit.jpg" Height ="30"  Width ="30" />
            
            

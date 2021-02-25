@@ -16,7 +16,17 @@ body {
 	padding-top: 15px;
 	background-color: #111;
 }
-
+.auto-style8 {
+	height: 100%;
+	width: 219px;
+	position: absolute;
+	z-index: 1;
+	top: 138px;
+	left: 13px;
+	overflow-x: hidden;
+	padding-top: 15px;
+	background-color: #111;
+}
 
 
 	/* The navigation menu links */

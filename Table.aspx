@@ -43,6 +43,9 @@
 <body>
     <form id="form1" runat="server">
         <link rel="stylesheet" href="main.css"/>
+        <asp:HyperLink 
+        ID="HyperLink1" runat="server" NavigateUrl="~/PatientAdd.aspx?ID=0">New 
+   Patient</asp:HyperLink>
         <table>
 <tr>
 <td rowspan="3" valign="middle" class="auto-style5"> &nbsp;<asp:HyperLink 

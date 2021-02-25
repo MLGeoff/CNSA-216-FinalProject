@@ -80,24 +80,27 @@ namespace DataBase
             string recordToBeEdited;
             Int64 myEditedRecord = 0;
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
             try
             {
                
                 
 
                 recordToBeEdited = (e.CommandArgument.ToString().Trim()); //encrypt this
+                //Session["Date"] = recordToBeEdited.ToString();
+                Response.Redirect("EditRefills.aspx?date= " + recordToBeEdited.ToString() + "&type=Edit");
 
                 //EncryptQueryString(recordToBeEdited);
 
                 
-                sb.Append("<script language='javascript'>");
-                //EncryptQueryString(recordToBeEdited.ToString());
-                sb.Append("window.open('EditRefills.aspx?ID=" + recordToBeEdited + "&type=Edit" + "' , 'DisplayEdit',");
-                //decryptQueryString(recordToBeEdited);
-                sb.Append("'width=525, height=525, menubar=no, resizable=yes, left=50, top=50, scrollbars=yes');<");
-                sb.Append("/script>");
+                //sb.Append("<script language='javascript'>");
+                ////EncryptQueryString(recordToBeEdited.ToString());
+                //sb.Append("window.open('EditRefills.aspx?ID=" + recordToBeEdited + "&type=Edit" + "' , 'DisplayEdit',");
+                ////decryptQueryString(recordToBeEdited);
+                //sb.Append("'width=525, height=525, menubar=no, resizable=yes, left=50, top=50, scrollbars=yes');<");
+                //sb.Append("/script>");
                 
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", sb.ToString());
+                //Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", sb.ToString());
             }
             catch (Exception ex)
             {
@@ -114,7 +117,8 @@ namespace DataBase
                 PatientDataTier ptd = new PatientDataTier();
                 Cache.Remove("StudentData");
                
-                            ptd.deleteRefill(date);
+                ptd.deleteRefill(date);
+                
               
               
             }
@@ -122,6 +126,11 @@ namespace DataBase
             {
                 lblException.Text = ex.Message.ToString();
             }
+            finally
+            {
+                Response.Redirect("Refills.aspx", true);
+            }
+         
         }
         private void BindData()
         {

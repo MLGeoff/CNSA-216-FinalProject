@@ -426,8 +426,36 @@ namespace DataBase {
                 cmdString.CommandText = "DELETEREFILL";
 
                 
-                cmdString.Parameters.Add("@dare_refill", SqlDbType.VarChar, 12).Value = date;
+                cmdString.Parameters.Add("@date_refill", SqlDbType.Date).Value = date;
                 
+                
+
+                SqlDataAdapter aAdapter = new SqlDataAdapter();
+                cmdString.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            finally
+            {
+                myConn.Close();
+            }
+        }
+        public void UPDATERefill(string rx_number, string date_refill, string amount)
+        {
+            try
+            {
+                myConn.Open();
+                cmdString.Parameters.Clear();
+                cmdString.Connection = myConn;
+                cmdString.CommandType = CommandType.StoredProcedure;
+                cmdString.CommandTimeout = 1500;
+                cmdString.CommandText = "UPDATEREFILL";
+
+                cmdString.Parameters.Add("@rx_number", SqlDbType.VarChar, 20).Value = rx_number;
+                cmdString.Parameters.Add("@date_refill", SqlDbType.Date).Value = date_refill;
+                cmdString.Parameters.Add("@amount", SqlDbType.VarChar, 12).Value = amount;
                 
 
                 SqlDataAdapter aAdapter = new SqlDataAdapter();

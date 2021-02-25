@@ -28,7 +28,8 @@ namespace DataBase
             {
 
                 
-                string queryDate = (Request.QueryString["Date"]);
+                //string queryDate = (Request.QueryString["Date_Refill"]);
+                string queryDate = Request.QueryString["date"].ToString();
 
 
                 if (String.IsNullOrEmpty(queryDate))
@@ -103,7 +104,20 @@ namespace DataBase
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            try {
+            PatientDataTier dateDT = new PatientDataTier();
+            DataSet ds = new DataSet();
+            string rx_number = txtRXNumber.Text;
+            string date_refill = txtDateRefill.Text;
+            string amount = textAmount.Text;
 
+
+            dateDT.UPDATERefill(rx_number, date_refill, amount);
+            }
+            catch (Exception ex)
+            {
+                lblException.Text = ex.Message.ToString();
+            }
         }
     }
 }

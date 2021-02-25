@@ -180,23 +180,23 @@ namespace DataBase
             {
                 if (btnClose.Text.ToUpper() == "REFRESH")
                 {
-                    patDT.addPatient(pat_ID,fname,midinit,lname,gender,dob,pat_address,city,pat_state,zip,phone,email,insurance); //add patient with args
-                    Session["GRIDREFRESH"] = "REFRESHDGRID";
-                    System.Text.StringBuilder cb = new System.Text.StringBuilder();
-                    cb.Append(" opener.location.href = 'home.aspx';");
-                    cb.Append("var ie7 = (document.all && !window.opera && window.XMLHttpRequest) ? true : false;");
-                    cb.Append(" if (ie7)");
-                    cb.Append(" { ");
-                    cb.Append("window.open('','_parent','');");
-                    cb.Append("window.close();");
-                    cb.Append(" } ");
-                    cb.Append(" else ");
-                    cb.Append(" { ");
-                    cb.Append(" this.focus();");
-                    cb.Append(" self.opener = this;");
-                    cb.Append(" self.close();");
-                    cb.Append(" } ");
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "CloseReloadScript", cb.ToString(), true);
+                    patDT.SHOWALLBYPATID(pat_ID); //add patient with args
+                    //Session["GRIDREFRESH"] = "REFRESHDGRID";
+                    //System.Text.StringBuilder cb = new System.Text.StringBuilder();
+                    //cb.Append(" opener.location.href = 'Table.aspx';");
+                    //cb.Append("var ie7 = (document.all && !window.opera && window.XMLHttpRequest) ? true : false;");
+                    //cb.Append(" if (ie7)");
+                    //cb.Append(" { ");
+                    //cb.Append("window.open('','_parent','');");
+                    //cb.Append("window.close();");
+                    //cb.Append(" } ");
+                    //cb.Append(" else ");
+                    //cb.Append(" { ");
+                    //cb.Append(" this.focus();");
+                    //cb.Append(" self.opener = this;");
+                    //cb.Append(" self.close();");
+                    //cb.Append(" } ");
+                    //ClientScript.RegisterClientScriptBlock(this.GetType(), "CloseReloadScript", cb.ToString(), true);
                     
                 }
                 else //if (btnClose.Text.ToUpper() == "CLOSE")

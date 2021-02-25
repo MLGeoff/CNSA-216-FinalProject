@@ -38,6 +38,28 @@
         .auto-style5 {
             width: 22%;
         }
+        .auto-style7 {
+            height: 100%;
+            width: 219px;
+            position: fixed;
+            z-index: 1;
+            top: 315px;
+            left: 13px;
+            overflow-x: hidden;
+            padding-top: 15px;
+            background-color: #111;
+        }
+        .auto-style8 {
+            height: 68%;
+            width: 219px;
+            position: fixed;
+            z-index: 1;
+            top: 315px;
+            left: 13px;
+            overflow-x: hidden;
+            padding-top: 15px;
+            background-color: #111;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +67,7 @@
         <link rel="stylesheet" href="main.css"/>
         <table>
 <tr>
-<td rowspan="3" valign="middle" class="auto-style5"> &nbsp;<asp:HyperLink 
+<td rowspan="3" valign="middle" class="auto-style5"> <asp:HyperLink 
         ID="hplNew" runat="server" NavigateUrl="~/PhysicianAdd.aspx?ID=0">New 
    Physician</asp:HyperLink></td>
 
@@ -161,7 +183,7 @@
     
     </asp:GridView>
  
-     <div class="auto-style1">
+     <div class="auto-style8">
             
             <asp:HyperLink ID="addLink" runat="server" Text="Add/Edit Patients" NavigateUrl="~/Table.aspx"></asp:HyperLink>
             <asp:HyperLink ID="staffDir" runat="server" Text="Staff Directory" NavigateUrl="~/PhysicianTable.aspx"></asp:HyperLink>
